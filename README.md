@@ -1,1 +1,1 @@
-# fun-with-ansible
+This repository is used to learn how to use Ansible and implement simple playbooks for a developer machine.
