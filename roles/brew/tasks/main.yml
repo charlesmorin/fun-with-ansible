@@ -1,0 +1,71 @@
+- name: Update brew daily
+  cron:
+    name: brew autoupdate
+    special_time: "daily"
+    job: "/usr/local/bin/brew update"
+
+- name: Cleanup brew
+  cron:
+    name: "brew cleanup"
+    special_time: "monthly"
+    job: "/usr/local/bin/brew cleanup"
+
+- name: Install bat syntax highlighting and git integration
+  homebrew: 
+    name: bat
+    state: latest
+
+- name: Install CircleCI
+  homebrew: 
+    name: circleci
+    state: latest
+
+- name: Install Docker
+  homebrew:
+    name: docker
+    state: latest
+  
+- name: Install Docker Compose
+  homebrew:
+    name: docker-compose
+    state: latest
+  
+- name: Install Docker Machine
+  homebrew:
+    name: docker-machine # deploying new docker virtual machines and install docker on it
+    state: latest    
+
+- name: Tap Drone Repository
+  homebrew_tap: 
+    name: drone/drone
+    state: present
+
+- name: Install Drone CLI
+  homebrew:
+    name: drone
+    state: latest
+
+- name: Install jq JSON processor    
+  homebrew:  
+    name: jq # a JSON processor
+    state: latest
+
+- name: Install Kubernetes CLI
+  homebrew: 
+    name: kubernetes-cli # command line for K8s
+    state: latest
+
+- name: Install Minikube
+  homebrew: 
+    name: minikube # tool to run Kubernetes locally for learning purposes
+    state: latest
+
+- name: Install Node.js
+  homebrew: 
+    name: node # Node.js
+    state: latest
+
+- name: Install Terraform
+  homebrew:
+    name: terraform # Infrastructure as Code
+    state: latest

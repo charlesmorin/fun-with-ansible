@@ -1,0 +1,7 @@
+- name: Install git
+  homebrew: 
+    name: git # Git
+    state: latest
+
+- name: Ensure ~/.gitconfig copied from master.gitconfig
+  copy: src="master.gitconfig" dest="~/.gitconfig" 

@@ -1,0 +1,6 @@
+- hosts: localhost
+  roles:
+    - brew
+    - cask
+    - git
+  user: charlesmorin

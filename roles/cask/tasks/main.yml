@@ -1,0 +1,9 @@
+- name: Install AdoptJDK
+  homebrew_cask: 
+    name: adoptopenjdk
+    state: latest
+
+- name: Install Minishift
+  homebrew_cask:
+    name: minishift
+    state: latest
